@@ -30,8 +30,8 @@ ifeq ($(shell uname), Darwin)
   PYINC := $(shell python3-config --includes)
   # If you use Anaconda, the command `python3-config` will not return full path.
   # In this case, please manually specify the full path like the following:
-  # PYLIBS := -L/Users/YOURNAME/anaconda3/lib/python3.6/config-3.6m-darwin -lpython3.6m -ldl -framework CoreFoundation
-  PYLIBS := $(shell python3-config --ldflags)
+  PYLIBS := -L/anaconda3/lib/python3.7/config-3.7m-darwin -lpython3.7m -ldl -framework CoreFoundation
+  # PYLIBS := $(shell python3-config --ldflags)
   SWIGFLAGS := -bundle -flat_namespace -undefined suppress
   LDLIBS := -lm -ldl -framework Accelerate
   SNOWBOYDETECTLIBFILE = $(TOPDIR)/lib/osx/libsnowboy-detect.a
